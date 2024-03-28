@@ -1,0 +1,87 @@
+.github-overview-page {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #27292b;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.header-bar {
+    background-color: #24292e;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 40px;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .header-logo svg {
+    fill: #fff;
+    margin-right: 5px;
+  }
+  
+  .header-logo h4 {
+    margin: 0;
+    font-size: 20px;
+    transition: color 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .header-logo h4:hover {
+    color: #f9826c; /* Change color on hover */
+  }
+
+  .search-user {
+    padding: 8px;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
+    flex: 1;
+    text-align: center;
+    background-color: #24292e; /* Background color */
+    color: #333; /* Text color */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .search-user:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+  }
+  
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right input[type='text'] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+    text-align: center; /* Center the text within the input */
+  }
+  
+  .header-right input[type='text']:focus {
+    outline: none;
+  }
+  
+  .bar-profile-pic {
+    border-radius: 50%;
+  }
+  
+.container{
+    max-width: max-content;
+    
+}

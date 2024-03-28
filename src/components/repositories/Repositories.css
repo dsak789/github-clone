@@ -1,0 +1,26 @@
+.repository-list {
+    margin-top: 20px;
+  }
+  
+  .repository-list h2 {
+    font-size: 20px;
+  }
+  
+  .repository-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .repository-list li {
+    margin-bottom: 10px;
+  }
+  
+  .repository-list li a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  .repository-list li a:hover {
+    text-decoration: underline;
+  }
+  
