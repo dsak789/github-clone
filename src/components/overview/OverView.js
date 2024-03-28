@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './OverView.css'
 import axios from 'axios';
-import RepositoryList from '../repositories/Repositories';
+// import RepositoryList from '../repositories/Repositories';
+import ReadmeComponent from '../readme/Reademe';
 import ProfileInfo from '../profileinfo/ProfileInfo';
 
 const OverView = () => {
-    const [userData, setUserData] = useState(null);
-
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('https://api.github.com/users/dsak789');
+  const [userData, setUserData] = useState(null);
+  const [fetching, setFetching] = useState(true);
+  const { username } = useParams();
+  const uname = username ? username : 'dsak789'
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`https://api.github.com/users/${uname}`);
+        console.log(uname)
         setUserData(response.data);
-        console(userData)
+        setFetching(false)
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
@@ -24,19 +29,7 @@ const OverView = () => {
 
   return (
     <div>
-     {/* {userData && (
-        <>
-          <ProfileInfo
-            company={userData.company}
-            location={userData.location}
-            email={userData.email}
-            blog={userData.blog}
-          />
-          <RepositoryList
-            reposUrl={userData.repos_url}
-          />
-        </>
-      )} */}{userData?
+   {userData?
       <div className='github-overview-page'>
         <div className='header-bar'>
           <div className='header-logo'>
@@ -57,8 +50,12 @@ const OverView = () => {
           </div>
         </div>
 
-        <div className='container'>
-          <ProfileInfo data ={userData}/>
+        <div className='container'>{fetching ? 
+          <h2>Fetching User {uname}.....</h2>:
+          <ProfileInfo data ={userData}/> 
+          // <ReadmeComponent owner="ownername" repo="reponame" />
+          }
+
         </div>
       </div>
       :
