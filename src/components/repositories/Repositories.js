@@ -21,7 +21,7 @@ const Repositories = ({ reposUrl }) => {
     <div className="repository-list">
       
         {repositories.map(repository => (
-          <div className="repository-display">
+          <div className="repository-display" key={repository.name}>
           <div className="repository-header"><h2 className="repository-name">
           <a href={repository.html_url} target="_blank" rel="noopener noreferrer">{repository.name}</a><br></br><span>{repository.description}</span></h2>
           </div>

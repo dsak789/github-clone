@@ -1,6 +1,7 @@
 .profile-container {
   display: flex;
   justify-content: center;
+  margin: 0 10px; /* Adjust margin for smaller devices */
 }
 
 .profile-header {
@@ -8,17 +9,19 @@
   flex-direction: column;
   align-items: center;
   background-color: #1d1d1f5f;
-  margin: 5% 15% 2% 50% ;
+  margin: 5% auto 2%;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  width: 90%; /* Adjust width for smaller devices */
+  max-width: 400px; /* Limit maximum width for smaller screens */
 }
 
 .profile-header img {
-  width: 350px;
-  height: 350px;
+  width: 250px; /* Adjust image size for smaller screens */
+  height: 250px; /* Adjust image size for smaller screens */
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 0; /* Remove margin for smaller screens */
 }
 
 .profile-info {
@@ -27,28 +30,27 @@
   gap: 10px;
   color: #dbd6d6;
   padding: 10px;
+  text-align: center; /* Center text for smaller screens */
 }
 
 .profile-info h2 {
-  font-size: 24px;
+  font-size: 20px; /* Decrease font size for smaller screens */
   margin: 0;
 }
 
 .profile-info h3 {
-  font-size: 18px;
+  font-size: 16px; /* Decrease font size for smaller screens */
   margin: 5px 0;
 }
 
 .profile-info p {
   margin: 5px 0;
-}
-
-.followers-info {
-  margin-top: 10px;
+  font-size: 14px; /* Decrease font size for smaller screens */
 }
 
 .followers-info p {
   margin: 5px 0;
+  font-size: 14px; /* Decrease font size for smaller screens */
 }
 
 .additional-info {
@@ -57,9 +59,11 @@
 
 .additional-info p {
   margin: 5px 0;
+  font-size: 14px; /* Decrease font size for smaller screens */
 }
 
 .additional-info strong {
   margin-right: 5px;
   font-weight: bold;
+  font-size: 14px; /* Decrease font size for smaller screens */
 }

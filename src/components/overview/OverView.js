@@ -16,7 +16,7 @@ const OverView = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(`https://api.github.com/users/${uname}`);
-        console.log(uname)
+        // console.log(uname)
         setUserData(response.data);
         setFetching(false)
       } catch (error) {
