@@ -30,13 +30,36 @@
   margin: 5px 0;
 }
 
-.repository-links a, .repository-header a {
+.repository-links a,
+.repository-header a {
   display: inline-block;
   margin-left: 10px;
   text-decoration: none;
   color: #0366d6; /* GitHub link color */
 }
 
-.repository-header a:hover  {
+.repository-header a:hover {
   text-decoration: underline;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .repository-display {
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  .repository-details {
+    flex-direction: column; /* Stack details vertically */
+    align-items: flex-start;
+  }
+
+  .repository-meta {
+    margin-top: 10px; /* Adjust margin */
+  }
+
+  .repository-links a,
+  .repository-header a {
+    margin-top: 10px; /* Adjust margin */
+    margin-left: 0;
+  }
 }
