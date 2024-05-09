@@ -1,26 +1,42 @@
-.repository-list {
-    margin-top: 20px;
-  }
-  
-  .repository-list h2 {
-    font-size: 20px;
-  }
-  
-  .repository-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .repository-list li {
-    margin-bottom: 10px;
-  }
-  
-  .repository-list li a {
-    color: #0366d6;
-    text-decoration: none;
-  }
-  
-  .repository-list li a:hover {
-    text-decoration: underline;
-  }
-  
+/* RepositoryDisplay.css */
+
+.repository-display {
+  border-bottom: 0.1px solid #ddd;
+  border-radius: 5px;
+  padding: 2px 5px 5px 15px;
+  margin-bottom: 20px;
+}
+
+.repository-name {
+  margin-top: 0;
+}
+
+.repository-description {
+  color: #666;
+}
+
+.repository-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.repository-meta {
+  flex: 1;
+}
+
+.repository-meta p {
+  margin: 5px 0;
+}
+
+.repository-links a, .repository-header a {
+  display: inline-block;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #0366d6; /* GitHub link color */
+}
+
+.repository-header a:hover  {
+  text-decoration: underline;
+}

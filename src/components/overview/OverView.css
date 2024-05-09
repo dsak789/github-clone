@@ -47,7 +47,7 @@
     flex: 1;
     text-align: center;
     background-color: #24292e; /* Background color */
-    color: #333; /* Text color */
+    color: #e2d8d8; /* Text color */
     font-size: 16px; /* Font size */
     transition: border-color 0.3s ease;
     font-family: 'Courier New', Courier, monospace;
@@ -85,3 +85,59 @@
     max-width: max-content;
     
 }
+
+
+.overview-repos{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.reposlist>h2>span {
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 2px 5px 2px 5px;
+  font-size:medium;
+}
+
+/* Regular styles */
+
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .overview-repos {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Add gap between elements */
+  }
+
+  .header-bar {
+    flex-direction: column;
+    padding: 15px; /* Adjust padding */
+  }
+
+  .search-user {
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  .header-right {
+    justify-content: center;
+    margin-top: 10px; /* Adjust margin */
+  }
+
+  .bar-profile-pic {
+    width: 50px; /* Adjust image size */
+    height: 50px; /* Adjust image size */
+  }
+
+  .container {
+    max-width: 90%; /* Adjust maximum width */
+  }
+
+  .user-not-found {
+    font-size: 18px; /* Adjust font size */
+  }
+}
+
+

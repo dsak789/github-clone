@@ -13,10 +13,10 @@ const ProfileInfo = ({ data}) => {
             <p>{data.followers} Followers - {data.following} Following</p>
           </div>
           <div className="additional-info">
-            <p><strong>Company:</strong> {data.company}</p>
-            <p><strong>Location:</strong> {data.location}</p>
+            {data.company && <p><strong>Company:</strong> {data.company}</p>}
+            {data.location && <p><strong>Location:</strong> {data.location}</p>}
             {data.email && <p><strong>Email:</strong> {data.email}</p>}
-            <p><strong>Blog:</strong> <a href={data.blog}>{data.blog}</a></p>
+            {data.blog && <p><strong>Blog:</strong> <a href={`https://${data.blog}`}>{data.blog}</a></p>}
           </div>
         </div>
       </div>

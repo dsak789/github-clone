@@ -19,14 +19,30 @@ const Repositories = ({ reposUrl }) => {
 
   return (
     <div className="repository-list">
-      <h2>Repositories</h2>
-      <ul>
-        {repositories.map(repo => (
-          <li key={repo.id}>
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
-          </li>
+      
+        {repositories.map(repository => (
+          <div className="repository-display" key={repository.name}>
+          <div className="repository-header"><h2 className="repository-name">
+          <a href={repository.html_url} target="_blank" rel="noopener noreferrer">{repository.name}</a><br></br><span>{repository.description}</span></h2>
+          </div>
+          <div className="repository-details">
+            <div className="repository-meta">
+              <p>Language: {repository.language}</p>
+              {/* <p>Stars: {repository.stargazers_count}</p>
+              <p>Watchers: {repository.watchers_count}</p>
+              <p>Forks: {repository.forks_count}</p> */}
+            </div>
+            <div className="repository-links">
+              {repository.has_pages  || (repository.homepage != null && 
+                <a href={repository.homepage} target="_blank" rel="noopener noreferrer">View Live Page</a>)
+              }
+              {/* <a href={`${repository.html_url}/issues`} target="_blank" rel="noopener noreferrer">Issues</a> */}
+            </div>
+          </div>
+        </div>
+          
         ))}
-      </ul>
+      
     </div>
   );
 }
