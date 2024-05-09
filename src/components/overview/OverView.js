@@ -9,6 +9,7 @@ import ProfileInfo from '../profileinfo/ProfileInfo';
 const OverView = () => {
   const [userData, setUserData] = useState(null);
   const [fetching, setFetching] = useState(true);
+  const [searchusrnm,setSearchusrnm] = useState("")
   const { username } = useParams();
   const uname = username ? username : 'dsak789'
   const fetchData = async () => {
@@ -42,20 +43,33 @@ const OverView = () => {
               <h4>{userData.login}</h4>
             </a>
           </div>
-          <input type='text' className='search-user' placeholder='Search user by username' />
+            <input 
+              type='text' 
+              className='search-user' 
+              placeholder='Search user by username and click Enter' 
+              value={searchusrnm} 
+              onChange={(e)=>{setSearchusrnm(e.target.value)}}
+              onKeyDown={(e)=>{
+                if(e.key === "Enter"){
+                  window.location.href =`${searchusrnm}`
+                }}
+              }/>
           <div className='hearder-right'>
             <div>
               <img className='bar-profile-pic' src={userData.avatar_url} alt={userData.name} height={50} width={50}/>
             </div>
           </div>
         </div>
+        <div>
+          <div className='container'>{fetching ? 
+            <h2>Fetching User {uname}.....</h2>:
+            <ProfileInfo data ={userData}/> 
+            }
+          </div>
+          <div>
+            {/* <ReadmeComponent owner="ownername" repo="reponame" /> */}
 
-        <div className='container'>{fetching ? 
-          <h2>Fetching User {uname}.....</h2>:
-          <ProfileInfo data ={userData}/> 
-          // <ReadmeComponent owner="ownername" repo="reponame" />
-          }
-
+          </div>
         </div>
       </div>
       :

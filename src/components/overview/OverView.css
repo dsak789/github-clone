@@ -47,7 +47,7 @@
     flex: 1;
     text-align: center;
     background-color: #24292e; /* Background color */
-    color: #333; /* Text color */
+    color: #e2d8d8; /* Text color */
     font-size: 16px; /* Font size */
     transition: border-color 0.3s ease;
     font-family: 'Courier New', Courier, monospace;
